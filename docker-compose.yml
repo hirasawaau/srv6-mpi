@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  onos:
+    image: onosproject/onos:2.7-latest
+    container_name: onos
+    ports:
+      - 8181:8181
+      - 8101:8101
+      - 9876:9876
+      - 5505:5505
+      - 6653:6653
+      - 830:830
+    
