@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "inet.h": "c",
+        "mpi.h": "c"
+    }
+}
