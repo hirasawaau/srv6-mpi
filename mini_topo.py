@@ -1,6 +1,6 @@
 from mininet.topo import Topo
 from base import IntelV6Host
-from main import Dumps
+from _main import Dumps
 from mininet.node import DefaultController, Host, OVSBridge, OVSKernelSwitch
 from mininet.link import Intf, Link, OVSLink
 from mininet.net import Mininet

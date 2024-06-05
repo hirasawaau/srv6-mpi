@@ -1,4 +1,4 @@
-.PHONY: run clean mpirun_r mpirun mpicom mpiclean i_mpirun_r i_mpirun i_mpicom i_mpirun_r4 i_mpirun_r6
+.PHONY: run clean mpirun_r4 mpirun mpicom mpiclean mpirun_r6 mpipwd_r6 mpipwd_r4
 
 run:
 	@echo "Running the program..."
@@ -14,30 +14,20 @@ clean:
 	rm -rf ./dump/*.pcap
 
 mpicom:
-	rm a.out
-	/opt/mpich/bin/mpicc mpi_ip.c
+	-rm a.out
+	/opt/ompi/bin/mpicc evaluate_mpi.c
 
 mpirun_r6:
-	/opt/mpich/bin/mpirun --np 24 --hostfile hosts.txt ./a.out
+	/opt/ompi/bin/mpirun --np 24 --allow-run-as-root --hostfile hosts.txt ./a.out
 
 mpirun_r4:
-	/opt/mpich/bin/mpirun --np 24 --hostfile hosts_v4.txt ./a.out
+	/opt/ompi/bin/mpirun --np 16 --allow-run-as-root --hostfile hosts_v4.txt --mca oob_base_verbose 100 --mca btl_base_verbose 100 ./a.out
 
-mpirun:
-	/opt/mpich/bin/mpirun --np 4 ./a.out
+mpipwd_r6:
+	/opt/ompi/bin/mpirun --np 16 --allow-run-as-root --hostfile hosts.txt --mca tcp6 ./a.o
 
-i_mpicom:
-	rm a.out
-	/opt/intel/oneapi/mpi/2021.12/bin/mpiicx mpi_ip.c
-
-i_mpirun_r6:
-	/opt/intel/oneapi/mpi/2021.12/bin/mpirun --np 12 --hostfile hosts.txt a.out
-
-i_mpirun_r4:
-	/opt/intel/oneapi/mpi/2021.12/bin/mpirun --np 24 --hostfile hosts_v4.txt ./a.out
-
-i_mpirun:
-	/opt/intel/oneapi/mpi/2021.12/bin/mpirun --np 4 ./a.out
+mpipwd_r4:
+	/opt/ompi/bin/mpirun --np 16 --allow-run-as-root --hostfile hosts_v4.txt --mca oob_base_verbose 100 --mca btl_base_verbose 100 pwd
 
 mpiclean:
 	rm a.out

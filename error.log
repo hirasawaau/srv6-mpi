@@ -1,0 +1,166 @@
+[momo:209620] mca: base: component_find: searching NULL for oob components
+[momo:209620] mca: base: find_dyn_components: checking NULL for oob components
+[momo:209620] pmix:mca: base: components_register: registering framework oob components
+[momo:209620] pmix:mca: base: components_register: found loaded component tcp
+[momo:209620] pmix:mca: base: components_register: component tcp register function successful
+[momo:209620] mca: base: components_open: opening oob components
+[momo:209620] mca: base: components_open: found loaded component tcp
+[momo:209620] mca: base: components_open: component tcp open function successful
+[momo:209620] mca:oob:select: checking available component tcp
+[momo:209620] mca:oob:select: Querying component [tcp]
+[momo:209620] oob:tcp: component_available called
+[momo:209620] [prterun-momo-209620@0,0] oob:tcp:init adding 10.0.1.2 to our list of V4 connections
+[momo:209620] [prterun-momo-209620@0,0] TCP STARTUP
+[momo:209620] [prterun-momo-209620@0,0] attempting to bind to IPv4 port 0
+[momo:209620] [prterun-momo-209620@0,0] assigned IPv4 port 45263
+[momo:209620] [prterun-momo-209620@0,0] attempting to bind to IPv6 port 0
+[momo:209620] [prterun-momo-209620@0,0] assigned IPv6 port 33357
+[momo:209620] mca:oob:select: Adding component to end
+[momo:209620] mca:oob:select: Found 1 active transports
+[momo:209620] [prterun-momo-209620@0,0] prte_oob_tcp_listen_thread: incoming connection: (19, 0) 10.0.3.2:55235
+[momo:209620] [prterun-momo-209620@0,0] connection_handler: working connection (19, 11) 10.0.3.2:55235
+[momo:209620] [prterun-momo-209620@0,0] accept_connection: 10.0.3.2:55235
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called
+[momo:209620] [prterun-momo-209620@0,0] RECV CONNECT ACK FROM UNKNOWN ON SOCKET 19
+[momo:209620] [prterun-momo-209620@0,0] waiting for connect ack from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] connect ack received from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] connect-ack recvd from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] prte_oob_tcp_recv_connect: connection from new peer
+[momo:209620] [prterun-momo-209620@0,0] connect-ack header from [prterun-momo-209620@0,3] is okay
+[momo:209620] [prterun-momo-209620@0,0] waiting for connect ack from [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0] connect ack received from [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0] connect-ack version from [prterun-momo-209620@0,3] matches ours
+[momo:209620] [prterun-momo-209620@0,0] tcp:peer_accept called for peer [prterun-momo-209620@0,3] in state UNKNOWN on socket 19
+[momo:209620] [prterun-momo-209620@0,0] SEND CONNECT ACK
+[momo:209620] [prterun-momo-209620@0,0] send blocking of 579 bytes to socket 19
+[momo:209620] [prterun-momo-209620@0,0] blocking send complete to socket 19
+[momo:209620] [prterun-momo-209620@0,0]-[prterun-momo-209620@0,3] tcp_peer_connected on socket 19
+[momo:209620] [prterun-momo-209620@0,0]-[prterun-momo-209620@0,3] accepted: 10.0.1.2 - 10.0.3.2 nodelay 1 sndbuf 87380 rcvbuf 87380 flags 00000802
+[momo:209620] [prterun-momo-209620@0,0] tcp:set_module called for peer [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called for peer [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler CONNECTED
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate new recv msg
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler read hdr
+[momo:209620] [prterun-momo-209620@0,0] RECVD ZERO-BYTE MESSAGE FROM [prterun-momo-209620@0,3] for tag 63
+[momo:209620] [prterun-momo-209620@0,0] RECVD COMPLETE MESSAGE FROM [prterun-momo-209620@0,3] (ORIGIN [prterun-momo-209620@0,3]) OF 0 BYTES FOR DEST [prterun-momo-209620@0,0] TAG 63
+[momo:209620] [prterun-momo-209620@0,0] DELIVERING TO RML tag = 63 seq_num = -1
+[momo:209620] [prterun-momo-209620@0,0] OOB_SEND: rml/rml_send.c:89
+[momo:209620] [prterun-momo-209620@0,0] oob:base:send to target [prterun-momo-209620@0,3] - attempt 0
+[momo:209620] [prterun-momo-209620@0,0] oob:base:send known transport for peer [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0] oob:tcp:send_nb to peer [prterun-momo-209620@0,3]:64 seq = -1
+[momo:209620] [prterun-momo-209620@0,0]:[oob_tcp.c:188] processing send to peer [prterun-momo-209620@0,3]:64 seq_num = -1 via [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_nb: already connected to [prterun-momo-209620@0,3] - queueing for send
+[momo:209620] [prterun-momo-209620@0,0]:[oob_tcp.c:197] queue send to [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_handler called to send to peer [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_handler SENDING TO [prterun-momo-209620@0,3]
+[momo:209620] oob:tcp:send_handler SENDING MSG
+[momo:209620] [prterun-momo-209620@0,0] MESSAGE SEND COMPLETE TO [prterun-momo-209620@0,3] OF 126 BYTES ON SOCKET 19
+--------------------------------------------------------------------------
+PMIx was unable to find a usable compression library
+on the system. We will therefore be unable to compress
+large data streams. This may result in longer-than-normal
+startup times and larger memory footprints. We will
+continue, but strongly recommend installing zlib or
+a comparable compression library for better user experience.
+
+You can suppress this warning by adding "pcompress_base_silence_warning=1"
+to your PMIx MCA default parameter file, or by adding
+"PMIX_MCA_pcompress_base_silence_warning=1" to your environment.
+--------------------------------------------------------------------------
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called for peer [prterun-momo-209620@0,3]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler CONNECTED
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate new recv msg
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler read hdr
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate data region of size 138
+[momo:209620] [prterun-momo-209620@0,0] RECVD COMPLETE MESSAGE FROM [prterun-momo-209620@0,3] (ORIGIN [prterun-momo-209620@0,3]) OF 138 BYTES FOR DEST [prterun-momo-209620@0,0] TAG 10
+[momo:209620] [prterun-momo-209620@0,0] DELIVERING TO RML tag = 10 seq_num = -1
+[momo:209620] [prterun-momo-209620@0,0] prte_oob_tcp_listen_thread: incoming connection: (20, 11) 10.0.2.2:55669
+[momo:209620] [prterun-momo-209620@0,0] connection_handler: working connection (20, 11) 10.0.2.2:55669
+[momo:209620] [prterun-momo-209620@0,0] accept_connection: 10.0.2.2:55669
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called
+[momo:209620] [prterun-momo-209620@0,0] RECV CONNECT ACK FROM UNKNOWN ON SOCKET 20
+[momo:209620] [prterun-momo-209620@0,0] waiting for connect ack from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] connect ack received from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] connect-ack recvd from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] prte_oob_tcp_recv_connect: connection from new peer
+[momo:209620] [prterun-momo-209620@0,0] connect-ack header from [prterun-momo-209620@0,2] is okay
+[momo:209620] [prterun-momo-209620@0,0] waiting for connect ack from [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0] connect ack received from [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0] connect-ack version from [prterun-momo-209620@0,2] matches ours
+[momo:209620] [prterun-momo-209620@0,0] tcp:peer_accept called for peer [prterun-momo-209620@0,2] in state UNKNOWN on socket 20
+[momo:209620] [prterun-momo-209620@0,0] SEND CONNECT ACK
+[momo:209620] [prterun-momo-209620@0,0] send blocking of 579 bytes to socket 20
+[momo:209620] [prterun-momo-209620@0,0] blocking send complete to socket 20
+[momo:209620] [prterun-momo-209620@0,0]-[prterun-momo-209620@0,2] tcp_peer_connected on socket 20
+[momo:209620] [prterun-momo-209620@0,0]-[prterun-momo-209620@0,2] accepted: 10.0.1.2 - 10.0.2.2 nodelay 1 sndbuf 87380 rcvbuf 87380 flags 00000802
+[momo:209620] [prterun-momo-209620@0,0] tcp:set_module called for peer [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called for peer [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler CONNECTED
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate new recv msg
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler read hdr
+[momo:209620] [prterun-momo-209620@0,0] prte_oob_tcp_listen_thread: incoming connection: (21, 11) 10.0.4.2:55975
+[momo:209620] [prterun-momo-209620@0,0] RECVD ZERO-BYTE MESSAGE FROM [prterun-momo-209620@0,2] for tag 63
+[momo:209620] [prterun-momo-209620@0,0] RECVD COMPLETE MESSAGE FROM [prterun-momo-209620@0,2] (ORIGIN [prterun-momo-209620@0,2]) OF 0 BYTES FOR DEST [prterun-momo-209620@0,0] TAG 63
+[momo:209620] [prterun-momo-209620@0,0] DELIVERING TO RML tag = 63 seq_num = -1
+[momo:209620] [prterun-momo-209620@0,0] connection_handler: working connection (21, 11) 10.0.4.2:55975
+[momo:209620] [prterun-momo-209620@0,0] accept_connection: 10.0.4.2:55975
+[momo:209620] [prterun-momo-209620@0,0] OOB_SEND: rml/rml_send.c:89
+[momo:209620] [prterun-momo-209620@0,0] oob:base:send to target [prterun-momo-209620@0,2] - attempt 0
+[momo:209620] [prterun-momo-209620@0,0] oob:base:send known transport for peer [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0] oob:tcp:send_nb to peer [prterun-momo-209620@0,2]:64 seq = -1
+[momo:209620] [prterun-momo-209620@0,0]:[oob_tcp.c:188] processing send to peer [prterun-momo-209620@0,2]:64 seq_num = -1 via [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_nb: already connected to [prterun-momo-209620@0,2] - queueing for send
+[momo:209620] [prterun-momo-209620@0,0]:[oob_tcp.c:197] queue send to [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_handler called to send to peer [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_handler SENDING TO [prterun-momo-209620@0,2]
+[momo:209620] oob:tcp:send_handler SENDING MSG
+[momo:209620] [prterun-momo-209620@0,0] MESSAGE SEND COMPLETE TO [prterun-momo-209620@0,2] OF 131 BYTES ON SOCKET 20
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called
+[momo:209620] [prterun-momo-209620@0,0] RECV CONNECT ACK FROM UNKNOWN ON SOCKET 21
+[momo:209620] [prterun-momo-209620@0,0] waiting for connect ack from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] connect ack received from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] connect-ack recvd from UNKNOWN
+[momo:209620] [prterun-momo-209620@0,0] prte_oob_tcp_recv_connect: connection from new peer
+[momo:209620] [prterun-momo-209620@0,0] connect-ack header from [prterun-momo-209620@0,4] is okay
+[momo:209620] [prterun-momo-209620@0,0] waiting for connect ack from [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0] connect ack received from [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0] connect-ack version from [prterun-momo-209620@0,4] matches ours
+[momo:209620] [prterun-momo-209620@0,0] tcp:peer_accept called for peer [prterun-momo-209620@0,4] in state UNKNOWN on socket 21
+[momo:209620] [prterun-momo-209620@0,0] SEND CONNECT ACK
+[momo:209620] [prterun-momo-209620@0,0] send blocking of 579 bytes to socket 21
+[momo:209620] [prterun-momo-209620@0,0] blocking send complete to socket 21
+[momo:209620] [prterun-momo-209620@0,0]-[prterun-momo-209620@0,4] tcp_peer_connected on socket 21
+[momo:209620] [prterun-momo-209620@0,0]-[prterun-momo-209620@0,4] accepted: 10.0.1.2 - 10.0.4.2 nodelay 1 sndbuf 87380 rcvbuf 87380 flags 00000802
+[momo:209620] [prterun-momo-209620@0,0] tcp:set_module called for peer [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called for peer [prterun-momo-209620@0,2]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler CONNECTED
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate new recv msg
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler read hdr
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate data region of size 138
+[momo:209620] [prterun-momo-209620@0,0] RECVD COMPLETE MESSAGE FROM [prterun-momo-209620@0,2] (ORIGIN [prterun-momo-209620@0,2]) OF 138 BYTES FOR DEST [prterun-momo-209620@0,0] TAG 10
+[momo:209620] [prterun-momo-209620@0,0] DELIVERING TO RML tag = 10 seq_num = -1
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called for peer [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler CONNECTED
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate new recv msg
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler read hdr
+[momo:209620] [prterun-momo-209620@0,0] RECVD ZERO-BYTE MESSAGE FROM [prterun-momo-209620@0,4] for tag 63
+[momo:209620] [prterun-momo-209620@0,0] RECVD COMPLETE MESSAGE FROM [prterun-momo-209620@0,4] (ORIGIN [prterun-momo-209620@0,4]) OF 0 BYTES FOR DEST [prterun-momo-209620@0,0] TAG 63
+[momo:209620] [prterun-momo-209620@0,0] DELIVERING TO RML tag = 63 seq_num = -1
+[momo:209620] [prterun-momo-209620@0,0] OOB_SEND: rml/rml_send.c:89
+[momo:209620] [prterun-momo-209620@0,0] oob:base:send to target [prterun-momo-209620@0,4] - attempt 0
+[momo:209620] [prterun-momo-209620@0,0] oob:base:send known transport for peer [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0] oob:tcp:send_nb to peer [prterun-momo-209620@0,4]:64 seq = -1
+[momo:209620] [prterun-momo-209620@0,0]:[oob_tcp.c:188] processing send to peer [prterun-momo-209620@0,4]:64 seq_num = -1 via [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_nb: already connected to [prterun-momo-209620@0,4] - queueing for send
+[momo:209620] [prterun-momo-209620@0,0]:[oob_tcp.c:197] queue send to [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_handler called to send to peer [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0] tcp:send_handler SENDING TO [prterun-momo-209620@0,4]
+[momo:209620] oob:tcp:send_handler SENDING MSG
+[momo:209620] [prterun-momo-209620@0,0] MESSAGE SEND COMPLETE TO [prterun-momo-209620@0,4] OF 136 BYTES ON SOCKET 21
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler called for peer [prterun-momo-209620@0,4]
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler CONNECTED
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate new recv msg
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler read hdr
+[momo:209620] [prterun-momo-209620@0,0]:tcp:recv:handler allocate data region of size 138
+[momo:209620] [prterun-momo-209620@0,0] RECVD COMPLETE MESSAGE FROM [prterun-momo-209620@0,4] (ORIGIN [prterun-momo-209620@0,4]) OF 138 BYTES FOR DEST [prterun-momo-209620@0,0] TAG 10
+[momo:209620] [prterun-momo-209620@0,0] DELIVERING TO RML tag = 10 seq_num = -1

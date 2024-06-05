@@ -1,7 +1,8 @@
 from mininet.topo import Topo
 from mininet.link import OVSLink
 from typing import List
-from base import FRR, IntelV6Host
+from base import IntelV6Host
+from router import SRv6
 
 class MpiFatTreeTopo(Topo):
 
@@ -12,8 +13,8 @@ class MpiFatTreeTopo(Topo):
     def __init__(self, coreNode = 1, c_e_bw = 1000, e_t_bw = 500, h_node = 2 , *args, **params ):
         super().__init__(*args, **params)
         # 2 , 4, 8
-        self.coreRouters = [self.addNode(f'c{i}' , cls=FRR, ip=None) for i in range(1,coreNode+1)]
-        self.edgeRouters = [self.addNode(f'e{i}' , cls=FRR, ip=None) for i in range(1, len(self.coreRouters)*2 + 1)]
+        self.coreRouters = [self.addNode(f'c{i}' , cls=SRv6, ip=None) for i in range(1,coreNode+1)]
+        self.edgeRouters = [self.addNode(f'e{i}' , cls=SRv6, ip=None) for i in range(1, len(self.coreRouters)*2 + 1)]
         self.hostNames = [self.addNode(f'h{i+1}' , cls=IntelV6Host, ip=None) for i in range(len(self.edgeRouters)*2)]
         self.h_node = h_node
 
